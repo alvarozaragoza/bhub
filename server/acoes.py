@@ -10,6 +10,10 @@ def PGTO_COMISSAO(pv_id, prod_id):
     # CODIFICAR OS PASSOS DA AÇÃO AQUI
     print(f"Executando ação PGTO_COMISSAO com pedido: {pv_id} e produto: {prod_id}")
  
+def ATIVAR_ASSOCIACAO(pv_id, prod_id):
+    # CODIFICAR OS PASSOS DA AÇÃO AQUI
+    print(f"Executando ação ATIVAR_ASSOCIACAO com pedido: {pv_id} e produto: {prod_id}")
+ 
 def ENVIO_VIDEO_PRIMEIROS_SOCORROS(pv_id, prod_id):
     # CODIFICAR OS PASSOS DA AÇÃO AQUI
     print(f"Executando ação ENVIO_VIDEO_PRIMEIROS_SOCORROS com pedido: {pv_id} e produto: {prod_id}")

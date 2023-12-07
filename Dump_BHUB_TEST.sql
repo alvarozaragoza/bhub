@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 07, 2023 at 06:14 PM
+-- Generation Time: Dec 07, 2023 at 07:54 PM
 -- Server version: 5.7.25
 -- PHP Version: 7.2.14
 
@@ -80,7 +80,8 @@ CREATE TABLE `T_PEDIDO_VENDA` (
 --
 
 INSERT INTO `T_PEDIDO_VENDA` (`PV_ID`, `PV_DATA`, `PV_CLI_ID`, `PV_TOTAL`, `PV_TOTAL_PAGO`, `PV_DT_PGTO`, `PV_STATUS`) VALUES
-(1, '2023-12-05', 1, '1500.00', '1500.00', '2023-12-05 00:00:00', 'E');
+(1, '2023-12-05', 1, '150.00', '150.00', '2023-12-05 00:00:00', 'E'),
+(2, '2023-12-07', 2, '400.00', '400.00', '2023-12-07 00:00:00', 'P');
 
 -- --------------------------------------------------------
 
@@ -132,7 +133,10 @@ INSERT INTO `T_PROD_ACAO_PAG` (`PRODACP_ID`, `PRODACP_PROD_ID`, `PRODACP_AC_ID`)
 (5, 2, 2),
 (6, 2, 5),
 (7, 5, 6),
-(8, 4, 3);
+(8, 4, 3),
+(9, 6, 1),
+(10, 6, 5),
+(11, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -169,7 +173,9 @@ CREATE TABLE `T_PV_ITENS` (
 
 INSERT INTO `T_PV_ITENS` (`PVI_ID`, `PVI_PV_ID`, `PVI_PROD_ID`, `PVI_QTDE`, `PVI_VALOR`, `PVI_STATUS`) VALUES
 (1, 1, 1, '1.00', 50, 'E'),
-(2, 1, 5, '1.00', 100, 'E');
+(2, 1, 5, '1.00', 100, 'E'),
+(3, 2, 4, '1.00', 300, 'P'),
+(4, 2, 6, '1.00', 100, 'P');
 
 -- --------------------------------------------------------
 
@@ -294,7 +300,7 @@ ALTER TABLE `T_CLIENTE`
 -- AUTO_INCREMENT for table `T_PEDIDO_VENDA`
 --
 ALTER TABLE `T_PEDIDO_VENDA`
-  MODIFY `PV_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `PV_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `T_PRODUTOS`
@@ -306,7 +312,7 @@ ALTER TABLE `T_PRODUTOS`
 -- AUTO_INCREMENT for table `T_PROD_ACAO_PAG`
 --
 ALTER TABLE `T_PROD_ACAO_PAG`
-  MODIFY `PRODACP_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `PRODACP_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `T_PVP_ACOES`
@@ -318,7 +324,7 @@ ALTER TABLE `T_PVP_ACOES`
 -- AUTO_INCREMENT for table `T_PV_ITENS`
 --
 ALTER TABLE `T_PV_ITENS`
-  MODIFY `PVI_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `PVI_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `T_PV_PGTOS`

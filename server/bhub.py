@@ -81,6 +81,7 @@ def processa_acoes():
     if pv_id:
         # Busca itens do pedido
         mycursor = mydb.cursor()
+        print(pv_id)
         mycursor.execute("SELECT * FROM V_PV_ITENS_ACOES WHERE PEDIDO = %s", (pv_id,))
         pv_itens = mycursor.fetchall()
 
